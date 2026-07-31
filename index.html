@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Meu Portfólio</h1>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<main>
+
+    <section id="sobre" class="card">
+        <img src="https://via.placeholder.com/200" alt="Foto de Perfil">
+
+        <div>
+            <h2>Quem Sou Eu?</h2>
+
+            <p>
+                Olá! Meu nome é flavio  <strong></strong>. Sou estudante de
+                programação e tenho interesse em desenvolvimento web,
+                banco de dados e criação de aplicações.
+            </p>
+
+            <p>
+                Estou aprendendo HTML, CSS e JavaScript para criar sites
+                modernos e funcionais.
+            </p>
+        </div>
+    </section>
+
+    <section id="hobbies" class="card">
+        <h2>Meus Hobbies</h2>
+
+        <ul>
+            <li>🎮 Jogar videogame</li>
+            <li>🎵 Ouvir música</li>
+            <li>💻 Programar</li>
+            <li>📚 Ler livros</li>
+            <li>⚽ Praticar esportes</li>
+        </ul>
+    </section>
+
+    <section id="projetos" class="card">
+        <h2>Projetos</h2>
+
+        <div class="projetos">
+
+            <div class="projeto">
+                <h3>Calculadora</h3>
+                <p>Projeto desenvolvido utilizando HTML, CSS e JavaScript.</p>
+            </div>
+
+            <div class="projeto">
+                <h3>Lista de Tarefas</h3>
+                <p>Aplicação para organizar atividades do dia.</p>
+            </div>
+
+            <div class="projeto">
+                <h3>Página Pessoal</h3>
+                <p>Site criado para apresentar minhas informações.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contato" class="card">
+
+        <h2>Entre em Contato</h2>
+
+        <form id="formContato">
+
+            <label>Nome</label>
+            <input type="text" id="nome">
+
+            <label>E-mail</label>
+            <input type="email" id="email">
+
+            <label>Mensagem</label>
+            <textarea id="mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+        <div id="resultado"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 | Desenvolvido por flavio</p>
+</footer>
+
+<script src="diagnostica.js"></script>
+
+</body>
+</html>

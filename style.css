@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    color:#333;
+}
+
+header{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd54f;
+}
+
+main{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+#sobre{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+#sobre img{
+    border-radius:50%;
+    width:200px;
+}
+
+h2{
+    color:#1f4e79;
+    margin-bottom:15px;
+}
+
+ul{
+    margin-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.projetos{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.projeto{
+    flex:1;
+    min-width:220px;
+    background:#f8f8f8;
+    border-left:5px solid #1f4e79;
+    padding:15px;
+    border-radius:8px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+input,textarea{
+    padding:10px;
+    border:1px solid #bbb;
+    border-radius:5px;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px;
+    background:#1f4e79;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#163b5d;
+}
+
+#resultado{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+footer{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:20px;
+}

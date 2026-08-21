@@ -35,4 +35,4 @@ class Produto {
 }
 
 // Exporta a classe para ser utilizada em outros arquivos
-module.exports = Produto;
+module.exports = Produto

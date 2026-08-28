@@ -35,6 +35,8 @@ formulario.addEventListener("submit", function(event) {
     const categoria = document.getElementById("categoria").value;
     const desconto = Number(document.getElementById("desconto").value);
 
+    const localStorage.setItem("produto",produto);
+
     const produto = new Produto(nome, preco, categoria, desconto);
 
     resultado.innerHTML = produto.exibir();

@@ -3,38 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produtos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Atividade 02</title>
 </head>
 <body>
+    <h1>Atividade 02</h1>
 
-    <div class="container">
-        <h1>Cadastro de Produtos</h1>
+    <input id="nome" type="text" placeholder="Nome">
+    <br>
+    <input id="preco" type="number" placeholder="Preço">
+    <br>
+    <input id="categoria" type="text" placeholder="Categoria">
+    <br>
+    <input id="desconto" type="number" placeholder="Desconto">
 
-        <form id="formProduto">
+    <button id="botaoCadastrar">
+        Cadastrar
+    </button>
 
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" required>
+    <div id="resultado"></div>
 
-            <label for="preco">Preço:</label>
-            <input type="number" id="preco" step="0.01" required>
 
-            <label for="categoria">Categoria:</label>
-            <input type="text" id="categoria" required>
-
-            <label for="desconto">Desconto (%):</label>
-            <input type="number" id="desconto" min="0" max="100" required>
-
-            <button type="submit">Cadastrar</button>
-
-        </form>
-
-        <h2>Produtos cadastrados</h2>
-
-        <div id="resultado"></div>
-    </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>

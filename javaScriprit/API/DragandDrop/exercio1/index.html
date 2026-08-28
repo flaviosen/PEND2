@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Drag and Drop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🛒 Carrinho de Compras</h1>
+
+    <p class="descricao">
+        Arraste os produtos para o carrinho.
+    </p>
+
+    <div class="container">
+
+        <!-- Produtos disponíveis -->
+        <div class="area">
+
+            <h2>Produtos Disponíveis</h2>
+
+            <div class="produtos">
+
+                <div class="produto"
+                    draggable="true"
+                    data-produto="Notebook">
+                    💻 Notebook
+                </div>
+
+                <div class="produto"
+                    draggable="true"
+                    data-produto="Celular">
+                    📱 Celular
+                </div>
+
+                <div class="produto"
+                    draggable="true"
+                    data-produto="Fone de Ouvido">
+                    🎧 Fone de Ouvido
+                </div>
+
+                <div class="produto"
+                    draggable="true"
+                    data-produto="Teclado">
+                    ⌨️ Teclado
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Carrinho -->
+        <div class="area carrinho" id="carrinho">
+
+            <h2>🛒 Carrinho</h2>
+
+            <div id="itensCarrinho">
+
+                <p class="vazio">
+                    Arraste um produto para cá
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mensagem de feedback -->
+    <div class="mensagem" id="mensagem"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

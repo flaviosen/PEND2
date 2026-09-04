@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Check-in de Evento</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">EVENTO+</div>
+
+        <span>Check-in Digital</span>
+    </header>
+
+
+    <main>
+
+        <div class="titulo">
+            <h1>Check-in do Participante</h1>
+
+            <p>
+                Confirme sua presença utilizando sua localização
+                e câmera.
+            </p>
+        </div>
+
+
+        <div class="cards">
+
+            <!-- CARD LOCALIZAÇÃO -->
+
+            <div class="card">
+
+                <div class="icone">
+                    📍
+                </div>
+
+                <h2>Localização</h2>
+
+                <p>
+                    Confirme o local onde o check-in
+                    está sendo realizado.
+                </p>
+
+                <button id="btnLocalizacao">
+                    Confirmar localização
+                </button>
+
+                <div class="dados">
+
+                    <div>
+                        <span>Latitude</span>
+                        <strong id="latitude">---</strong>
+                    </div>
+
+                    <div>
+                        <span>Longitude</span>
+                        <strong id="longitude">---</strong>
+                    </div>
+
+                    <div>
+                        <span>Precisão</span>
+                        <strong id="precisao">---</strong>
+                    </div>
+
+                </div>
+
+                <p id="mensagemLocalizacao"></p>
+
+            </div>
+
+
+            <!-- CARD CÂMERA -->
+
+            <div class="card">
+
+                <div class="icone">
+                    📷
+                </div>
+
+                <h2>Registro Fotográfico</h2>
+
+                <p>
+                    Ative sua câmera para realizar
+                    o registro visual do check-in.
+                </p>
+
+                <button id="btnCamera">
+                    Abrir câmera
+                </button>
+
+                <video
+                    id="camera"
+                    autoplay
+                    playsinline>
+                </video>
+
+                <p id="mensagemCamera"></p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        Check-in Digital • Sistema desenvolvido com Web APIs
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

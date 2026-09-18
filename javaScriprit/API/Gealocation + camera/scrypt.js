@@ -1,181 +1,81 @@
-// ==========================================
-// CHECK-IN DE EVENTO
-// ==========================================
-
-
-// ==========================================
+// ==========================
 // GEOLOCATION
-// ==========================================
-
-const btnLocalizacao =
-    document.getElementById("btnLocalizacao");
-
-btnLocalizacao.addEventListener(
-    "click",
-    obterLocalizacao
-);
-
+// ==========================
 
 function obterLocalizacao() {
 
-    const mensagem =
-        document.getElementById(
-            "mensagemLocalizacao"
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function (posicao) {
+
+                const latitude = posicao.coords.latitude;
+                const longitude = posicao.coords.longitude;
+                const precisao = posicao.coords.accuracy;
+
+                document.getElementById("latitude").innerText =
+                    "Latitude: " + latitude;
+
+                document.getElementById("longitude").innerText =
+                    "Longitude: " + longitude;
+
+                document.getElementById("precisao").innerText =
+                    "Precisão: " + precisao + " metros";
+            },
+
+            function () {
+                alert("Não foi possível obter a localização.");
+            }
         );
 
-
-    if (!navigator.geolocation) {
-
-        mensagem.textContent =
-            "Seu navegador não suporta Geolocation.";
-
-        mensagem.className = "erro";
-
-        return;
+    } else {
+        alert("Geolocation não é suportada pelo navegador.");
     }
-
-
-    mensagem.textContent =
-        "Obtendo sua localização...";
-
-
-    navigator.geolocation.getCurrentPosition(
-
-        function (posicao) {
-
-            const latitude =
-                posicao.coords.latitude;
-
-            const longitude =
-                posicao.coords.longitude;
-
-            const precisao =
-                posicao.coords.accuracy;
-
-
-            document.getElementById(
-                "latitude"
-            ).textContent =
-                latitude.toFixed(6);
-
-
-            document.getElementById(
-                "longitude"
-            ).textContent =
-                longitude.toFixed(6);
-
-
-            document.getElementById(
-                "precisao"
-            ).textContent =
-                precisao.toFixed(2) + " m";
-
-
-            mensagem.textContent =
-                "✓ Localização confirmada.";
-
-            mensagem.className =
-                "sucesso";
-        },
-
-
-        function (erro) {
-
-            mensagem.className = "erro";
-
-
-            if (
-                erro.code ===
-                erro.PERMISSION_DENIED
-            ) {
-
-                mensagem.textContent =
-                    "Permissão de localização recusada.";
-
-            } else if (
-                erro.code ===
-                erro.POSITION_UNAVAILABLE
-            ) {
-
-                mensagem.textContent =
-                    "Localização indisponível.";
-
-            } else if (
-                erro.code ===
-                erro.TIMEOUT
-            ) {
-
-                mensagem.textContent =
-                    "Tempo limite excedido.";
-
-            } else {
-
-                mensagem.textContent =
-                    "Erro ao obter localização.";
-
-            }
-
-        }
-
-    );
-
 }
 
 
-// ==========================================
+// ==========================
 // CÂMERA
-// ==========================================
+// ==========================
 
-const btnCamera =
-    document.getElementById("btnCamera");
+navigator.mediaDevices.getUserMedia({
+    video: true
+})
 
-btnCamera.addEventListener(
-    "click",
-    abrirCamera
-);
+.then(function (stream) {
 
+    const video = document.getElementById("camera");
 
-async function abrirCamera() {
+    video.srcObject = stream;
 
-    const video =
-        document.getElementById("camera");
+})
 
-    const mensagem =
-        document.getElementById(
-            "mensagemCamera"
-        );
+.catch(function (erro) {
 
+    console.log("Não foi possível acessar a câmera:", erro);
 
-    try {
-
-        const stream =
-            await navigator.mediaDevices.getUserMedia({
-
-                video: true,
-
-                audio: false
-
-            });
+});
 
 
-        video.srcObject = stream;
+// ==========================
+// TIRAR FOTO
+// ==========================
 
+function tirarFoto() {
 
-        mensagem.textContent =
-            "✓ Câmera ativada.";
+    const video = document.getElementById("camera");
+    const canvas = document.getElementById("foto");
 
-        mensagem.className =
-            "sucesso";
+    const contexto = canvas.getContext("2d");
 
-    } catch (erro) {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
 
-        console.error(erro);
-
-        mensagem.textContent =
-            "Não foi possível acessar a câmera.";
-
-        mensagem.className =
-            "erro";
-    }
-
+    contexto.drawImage(
+        video,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
 }

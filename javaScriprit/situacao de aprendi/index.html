@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clima Agora</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="topo">
+            <h1>🌤️ Clima Agora</h1>
+            <p>Consulte a previsão do tempo da sua cidade</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="pesquisa">
+
+            <h2>Pesquisar cidade</h2>
+
+            <form id="formBusca">
+
+                <input
+                    type="text"
+                    id="cidade"
+                    placeholder="Digite o nome da cidade"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="btnBuscar">
+                    🔎 Buscar
+                </button>
+
+            </form>
+
+            <button id="btnLocalizacao" class="btn-localizacao">
+                📍 Usar minha localização
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+        </section>
+
+        <section class="resultado">
+
+            <div class="titulo-resultados">
+
+                <h2 id="nomeCidade">
+                    Clima da sua cidade
+                </h2>
+
+                <p id="dataAtual">
+                    Pesquise uma cidade para começar
+                </p>
+
+            </div>
+
+            <div id="climaAtual" class="clima-atual">
+
+                <div class="inicio">
+
+                    <div class="icone">
+                        🌤️
+                    </div>
+
+                    <h3>
+                        Veja como está o tempo
+                    </h3>
+
+                    <p>
+                        Digite uma cidade ou use sua localização.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="previsao">
+
+            <h2>
+                Previsão para os próximos dias
+            </h2>
+
+            <div id="listaPrevisao" class="lista-previsao">
+
+                <p class="aviso">
+                    A previsão aparecerá depois da pesquisa.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Projeto Front-End - Situação de Aprendizagem 03
+        </p>
+
+        <p>
+            Dados meteorológicos fornecidos pela Open-Meteo
+        </p>
+
+    </footer>
+
+    <script src="sripty.js"></script>
+
+</body>
+</html>
